@@ -1,0 +1,116 @@
+@use '../abstract';
+
+.home {
+    position: relative;
+    z-index: 1;
+    background-color: abstract.$white;
+    overflow-x: hidden;
+
+    &-about {
+        padding-top: 10rem;
+
+        &__text {
+            margin-bottom: 3.2rem;
+        }
+    }
+
+    &-products {
+        background-color: abstract.$gray-100;
+
+        &__content {
+            padding: 6rem 0;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        @include abstract.max-1199 {
+            &__content {
+                padding-left: 0.75rem !important;
+                padding-right: 0.75rem;
+            }
+        }
+
+        &__text {
+            margin-bottom: 3.2rem;
+        }
+
+        &__carousel {
+            background-color: abstract.$red-500;
+            // padding: 6rem;
+            padding-right: 0;
+            margin-top: 6rem;
+
+            .owl-carousel {
+                padding: 6rem;
+                padding-right: 0;
+
+                .owl-stage {
+                    display: flex;
+                    align-items: stretch;
+                }
+            }
+
+            @include abstract.max-767 {
+                .owl-carousel {
+                    padding-right: 6rem;
+                }
+            }
+
+            .owl-theme .owl-nav .owl-prev,
+            .owl-theme .owl-nav .owl-next {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                font-size: 2.8rem;
+                color: abstract.$red-500;
+                background-color: abstract.$white;
+                width: 4rem;
+                height: 4rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                opacity: 0.8;
+                transition: all .2s;
+            }
+
+            .owl-theme .owl-nav .owl-prev {
+                position: absolute;
+                left: 1%;
+            }
+
+            .owl-theme .owl-nav .owl-next {
+                position: absolute;
+                right: 1%;
+            }
+
+            .owl-theme .owl-nav [class*=owl-]:hover {
+                opacity: 1;
+            }
+
+            .owl-theme .owl-dots .owl-dot span {
+                background: #fff;
+                width: 12px;
+                height: 12px;
+                opacity: .7;
+            }
+
+            .owl-theme .owl-dots .owl-dot.active span {
+                background: #fff;
+                opacity: 1;
+            }
+        }
+
+
+    }
+
+    &-projects {
+        padding-bottom: 10rem;
+
+        &__content {
+            margin-bottom: 3.2rem;
+        }
+    }
+}

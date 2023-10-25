@@ -1,0 +1,18 @@
+@use '../abstract';
+
+.heading {
+    margin-bottom: 2rem;
+
+    &__primary {
+        font-size: abstract.$heading-size-md;
+        font-weight: 700;
+    }
+
+    &__secondary {
+        color: abstract.$red-500;
+        font-size: abstract.$font-size-md;
+        font-weight: 700;
+    }
+}
+
+.heading-title {}

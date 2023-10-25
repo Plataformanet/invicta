@@ -1,0 +1,41 @@
+@use '../abstract';
+
+.about-card {
+    aspect-ratio: 1/1;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, .5));
+        z-index: 0;
+    }
+
+    &__background {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+    }
+
+    &__name {
+        text-align: center;
+        font-size: abstract.$font-size-xl;
+        font-weight: 700;
+        padding: 1.2rem;
+        margin: 2.4rem;
+        width: 100%;
+        color: abstract.$white;
+        background-color: rgba(199, 203, 206, 0.5);
+        z-index: 1;
+    }
+}

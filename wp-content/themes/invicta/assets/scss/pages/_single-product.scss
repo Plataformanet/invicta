@@ -1,0 +1,75 @@
+@use '../abstract';
+
+.product {
+    margin-top: 6.4rem;
+
+    &-gallery {
+        overflow-x: hidden;
+
+        &__main {}
+
+        &__thumbnail {
+
+
+            .owl-item {
+                border: 0.1rem solid rgba(0, 0, 0, 0.05);
+                border-radius: .4rem;
+                cursor: pointer;
+
+                &.current {
+                    border: 0.1rem solid abstract.$red-500;
+                }
+            }
+
+            .product-gallery__item {
+                height: 8rem;
+                padding: 1.2rem;
+            }
+        }
+
+        &__item {
+            @include abstract.flex-center;
+            padding: 0 2rem 2rem 2rem;
+            height: 30rem;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+    }
+
+    &-description {
+        overflow-x: hidden;
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-weight: 700;
+        }
+    }
+
+    &-details {
+        margin-top: 3.2rem;
+        margin-bottom: 6.4rem;
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-weight: 700;
+        }
+    }
+
+    &-button {
+        padding-bottom: 10rem;
+        @include abstract.flex-center;
+        gap: 2rem;
+    }
+}

@@ -1,0 +1,84 @@
+@use '../abstract';
+
+.product-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    align-items: stretch;
+    padding: 0.8rem;
+    transition: all 0.2s ease-out;
+
+    &__image {
+        width: 100%;
+        height: 30rem;
+        padding: 2rem;
+        background-color: abstract.$gray-100;
+        overflow: hidden;
+        @include abstract.flex-center;
+
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
+            transition: all 0.2s ease-in-out;
+            mix-blend-mode: multiply;
+        }
+    }
+
+    &__name {
+        flex-grow: 1;
+        position: relative;
+
+        h3,
+        span {
+            text-align: center;
+            height: 100%;
+            font-weight: 700;
+            transition: all 0.4s;
+        }
+
+        h3 {
+            padding: 2rem 4rem;
+            margin: 0;
+            @include abstract.flex-center;
+            background-color: abstract.$gray-100;
+            color: abstract.$black;
+            border-top: 0.4rem solid abstract.$gray-600;
+            transition-delay: .2s;
+        }
+
+        span {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 0;
+            overflow: hidden;
+            @include abstract.flex-center;
+            color: abstract.$white;
+            background-color: abstract.$red-600;
+
+            white-space: nowrap;
+        }
+
+    }
+
+    &:hover {
+        transform: scale(1.02);
+    }
+
+    &:hover &__image img {
+        transform: scale(1.05);
+    }
+
+    &:hover &__name h3 {
+        opacity: 0;
+    }
+
+    &:hover &__name span {
+        height: 100%;
+        border-top: 0.4rem solid abstract.$red-600;
+        transition-delay: .3s;
+    }
+}

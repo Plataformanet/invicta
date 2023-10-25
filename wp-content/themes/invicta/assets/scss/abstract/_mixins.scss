@@ -1,0 +1,35 @@
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin max-575 {
+    @media (max-width: 575px) {
+        @content;
+    }
+}
+
+@mixin max-767 {
+    @media (max-width: 767px) {
+        @content;
+    }
+}
+
+@mixin max-991 {
+    @media (max-width: 991px) {
+        @content;
+    }
+}
+
+@mixin max-1199 {
+    @media (max-width: 1199px) {
+        @content;
+    }
+}
+
+@mixin max-1399 {
+    @media (max-width: 1399px) {
+        @content;
+    }
+}

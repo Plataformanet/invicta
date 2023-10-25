@@ -1,0 +1,29 @@
+@use '../abstract';
+
+.representative {
+    background-color: abstract.$white;
+
+    &-header {
+        margin-top: 10rem;
+    }
+
+    &-form {
+        padding-bottom: 10rem;
+
+        label {
+            position: absolute;
+            left: -9999rem;
+        }
+
+        .curriculum-label {
+            position: relative;
+            left: 0;
+        }
+
+        .field-info {
+            font-size: abstract.$font-size-xs;
+            color: abstract.$gray-600;
+        }
+
+    }
+}

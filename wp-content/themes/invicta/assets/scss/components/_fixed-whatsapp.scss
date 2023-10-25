@@ -1,0 +1,38 @@
+@use '../abstract';
+
+.fixed-whatsapp {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background-color: abstract.$green-whatsapp-500;
+    display: flex;
+    @include abstract.flex-center;
+    z-index: 999;
+    transform-style: preserve-3d;
+    transition: all .2s;
+
+    i {
+        font-size: 2.8rem;
+        color: #fff;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: 4.2rem;
+        height: 4.2rem;
+        border-radius: 50%;
+        background-color: abstract.$green-whatsapp-700;
+        z-index: -999;
+        animation: scaleUpScaleDown 2s ease-in infinite both;
+        transform: translateZ(-1px);
+        filter: blur(1px);
+    }
+
+    &:hover {
+        transform: scale(1.2);
+    }
+}

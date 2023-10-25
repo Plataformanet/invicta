@@ -1,0 +1,144 @@
+@use '../abstract';
+
+.products {
+    background-color: abstract.$white;
+
+    &-header {
+        margin-bottom: 4rem;
+    }
+
+    &-categories {
+        margin: 3.2rem 0;
+        overflow: hidden;
+        margin-top: 10rem;
+
+        .owl-carousel {
+            .owl-stage-outer {
+                overflow: unset;
+            }
+        }
+
+        .owl-theme {
+
+            .owl-nav {
+                margin: 0 !important;
+
+                .owl-prev,
+                .owl-next {
+                    position: absolute;
+                    top: 0;
+                    // transform: translateY(-50%);
+                    font-size: 2.8rem;
+                    color: abstract.$red-500;
+                    background-color: abstract.$gray-100;
+                    width: 4rem;
+                    height: 4rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    opacity: 0.4;
+                    transition: all .2s;
+                }
+
+                .owl-prev {
+                    position: absolute;
+                    left: -6rem;
+
+                    @include abstract.max-1199 {
+                        left: 1%;
+                    }
+                }
+
+                .owl-next {
+                    position: absolute;
+                    right: 1%;
+                }
+
+                [class*=owl-]:hover {
+                    opacity: 1;
+                }
+            }
+
+
+        }
+
+
+
+
+        &__item {
+            display: block;
+            background-color: abstract.$gray-100;
+            color: abstract.$black;
+            padding: 1.2rem 2.4rem;
+            position: relative;
+
+            &::before {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: auto;
+                right: 0;
+                width: 0;
+                height: 0.4rem;
+                background-color: abstract.$red-500;
+                transition: all .4s ease-in-out;
+            }
+
+            &:hover,
+            &.active {
+                &::before {
+                    width: 100%;
+                    right: auto;
+                    left: 0;
+                }
+            }
+
+            &.active {
+                font-weight: 700;
+            }
+        }
+    }
+
+    &-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+        gap: 4rem;
+        margin: 3.2rem 0;
+
+        @include abstract.max-991 {
+
+            grid-template-columns: repeat(2, 1fr);
+
+        }
+
+        @include abstract.max-767 {
+
+            grid-template-columns: repeat(1, 1fr);
+
+        }
+    }
+
+    &-pagination {
+        display: flex;
+        justify-content: center;
+
+        a {
+            color: abstract.$white;
+            background-color: abstract.$red-500;
+            margin: 0 .25rem;
+            padding: .9rem;
+            border: 1px solid abstract.$white;
+            transition: all .2s;
+        }
+
+        a:hover,
+        span {
+            color: abstract.$red-500;
+            background-color: abstract.$white;
+            margin: 0 .25rem;
+            padding: .9rem;
+            border: 1px solid abstract.$red-500;
+        }
+    }
+}

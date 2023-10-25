@@ -1,0 +1,60 @@
+@use '../abstract';
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    font-size: abstract.$font-size-lg;
+    font-weight: bold;
+    padding: 1.2rem 1.6rem;
+    line-height: 1;
+    border-radius: 0;
+    transition: all 0.2s;
+
+    i {
+        font-size: 2rem;
+    }
+
+    &--white {
+        color: abstract.$white;
+
+        &:hover {
+            color: abstract.$white;
+        }
+    }
+
+    &--bg-red {
+        background-color: abstract.$red-500;
+
+        &:hover {
+            background-color: darken(abstract.$red-500, 15);
+        }
+    }
+
+    &--bg-white {
+        background-color: abstract.$white;
+
+        &:hover {
+            background-color: darken(abstract.$white, 15);
+        }
+    }
+
+
+    &--bg-gray {
+        background-color: abstract.$gray-600;
+
+        &:hover {
+            background-color: darken(abstract.$gray-600, 15);
+        }
+    }
+
+    &--bg-green {
+        background-color: #25D366;
+
+        &:hover {
+            background-color: darken(#25D366, 15);
+        }
+    }
+
+}

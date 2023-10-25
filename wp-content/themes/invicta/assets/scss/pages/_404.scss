@@ -1,0 +1,30 @@
+@use '../abstract';
+
+.page-404 {
+    background-color: abstract.$white;
+
+    &-main {
+        padding: 20rem 0;
+        @include abstract.flex-center;
+        flex-direction: column;
+        text-align: center;
+
+        h1 {
+            font-size: abstract.$heading-size-sm;
+            text-align: center;
+            font-weight: 700;
+            font-size: 4rem;
+            line-height: 1;
+            margin-bottom: 2rem;
+
+            span {
+                font-size: 8rem;
+                display: block;
+            }
+        }
+
+        p {
+            margin-bottom: 3.2rem;
+        }
+    }
+}

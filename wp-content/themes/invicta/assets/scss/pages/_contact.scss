@@ -1,0 +1,41 @@
+@use '../abstract';
+
+.contact {
+    background-color: abstract.$white;
+
+    &-header {
+        margin-top: 10rem;
+    }
+
+    &-infos {
+        margin-top: 3.2rem;
+        margin-bottom: 10rem;
+        display: flex;
+        flex-direction: column;
+        gap: 3.2rem;
+
+        &__item {
+            display: flex;
+            align-items: center;
+            color: abstract.$black;
+            gap: 0.8rem;
+            font-weight: 500;
+
+            .icon {
+                border: 1px solid abstract.$black;
+            }
+
+            &--social {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.4rem;
+
+                .social__icon {
+                    color: abstract.$black;
+                    border: 1px solid abstract.$black;
+
+                }
+            }
+        }
+    }
+}

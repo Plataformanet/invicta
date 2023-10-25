@@ -1,0 +1,14 @@
+@use '../abstract';
+
+.projects {
+    background-color: abstract.$white;
+
+    &-header {
+        margin-top: 10rem;
+    }
+
+    &-list {
+        margin-top: 3.2rem;
+        padding-bottom: 10rem;
+    }
+}

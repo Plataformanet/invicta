@@ -1,0 +1,88 @@
+@use "../abstract";
+
+$footer-padding: 3.2rem;
+
+.footer {
+  background-color: abstract.$red-500;
+  padding: $footer-padding;
+  padding-bottom: 0;
+  font-size: abstract.$font-size-md;
+  position: sticky;
+  bottom: 0;
+  z-index: 0;
+
+  @include abstract.max-575 {
+    position: relative;
+  }
+
+  &__logo {
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 25rem;
+      max-width: 100%;
+    }
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+  }
+
+  &__item {
+    color: abstract.$white;
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+
+    &--phones {
+      display: flex;
+      flex-wrap: nowrap;
+
+      a {
+        color: abstract.$white;
+      }
+
+      &-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.4rem;
+      }
+    }
+  }
+
+  &__social {
+    justify-content: flex-end;
+  }
+
+  &__copyright {
+    text-align: center;
+    font-size: abstract.$font-size-xs;
+    padding: 1.2rem 2rem;
+    background-color: abstract.$gray-800;
+    color: abstract.$white;
+    text-transform: uppercase;
+    margin-top: $footer-padding;
+    width: calc(100% + $footer-padding * 2);
+    position: relative;
+    left: -$footer-padding;
+  }
+
+  @include abstract.max-767 {
+    &__logo {
+      justify-content: center;
+      padding-bottom: 3.2rem;
+    }
+
+    &__items {
+      margin-bottom: 3.2rem;
+    }
+
+    &__social {
+      justify-content: center;
+    }
+  }
+}

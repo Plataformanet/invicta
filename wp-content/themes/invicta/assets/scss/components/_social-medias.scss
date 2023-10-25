@@ -1,0 +1,11 @@
+@use '../abstract';
+
+.social {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+
+    &__item {
+        color: abstract.$white;
+    }
+}

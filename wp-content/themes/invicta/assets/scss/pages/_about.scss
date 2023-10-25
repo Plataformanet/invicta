@@ -1,0 +1,75 @@
+@use "../abstract";
+
+.about {
+  background-color: abstract.$white;
+  position: relative;
+  z-index: 1;
+
+  &-banner {
+    position: sticky;
+    top: 0;
+    z-index: 0;
+
+    @include abstract.max-575 {
+      position: relative;
+    }
+
+    img {
+      width: 100%;
+      aspect-ratio: 16 / 4;
+      object-fit: cover;
+    }
+  }
+
+  &-text {
+  }
+
+  &-topics {
+    &__content {
+      background-color: abstract.$gray-100;
+      padding: 2.4rem 0.8rem;
+    }
+
+    &__item {
+      display: flex;
+      gap: 1.2rem;
+      font-size: abstract.$font-size-md;
+    }
+
+    &__icon {
+      flex: 0 0 auto;
+
+      img {
+        width: 9.6rem;
+        height: 9.6rem;
+        object-fit: contain;
+      }
+    }
+
+    &__text {
+      h3 {
+        font-weight: 700;
+      }
+    }
+  }
+
+  &-areas {
+    padding-bottom: 10rem;
+
+    &__grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: auto;
+      gap: 4rem;
+      margin-top: 3.2rem;
+
+      @include abstract.max-991 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @include abstract.max-767 {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+  }
+}

@@ -1,0 +1,162 @@
+@use "../abstract";
+
+.banner {
+  width: 100%;
+  aspect-ratio: 19 / 8;
+  position: sticky;
+  top: 0;
+  z-index: 0;
+
+  &__carousel {
+  }
+
+  &__item {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 19 / 8;
+    display: flex;
+    align-items: stretch;
+  }
+
+  &__bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+
+  &__content {
+    height: 100%;
+    padding: 4rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 50%;
+    max-width: 100%;
+
+    // @include abstract.max-575 {
+    //   width: 30rem;
+    //   max-width: 100%;
+    // }
+  }
+
+  &__subtitle,
+  &__title {
+    color: abstract.$white;
+  }
+
+  .text--white &__subtitle,
+  .text--white &__title {
+    color: abstract.$white !important;
+  }
+  .text--black &__subtitle,
+  .text--black &__title {
+    color: abstract.$black !important;
+  }
+
+  &__title {
+    margin-bottom: 2rem;
+    font-size: abstract.$heading-size-lg;
+
+    @include abstract.max-991 {
+      font-size: 2.4rem;
+    }
+
+    @include abstract.max-767 {
+      font-size: 2rem;
+    }
+    @include abstract.max-575 {
+      font-size: 1.6rem;
+    }
+  }
+
+  &__subtitle {
+    font-size: abstract.$font-size-xl;
+    margin-bottom: 0.4rem;
+
+    @include abstract.max-991 {
+      font-size: 2rem;
+    }
+    @include abstract.max-767 {
+      font-size: 1.6rem;
+    }
+    @include abstract.max-575 {
+      font-size: 1.2rem;
+    }
+  }
+
+  &__link {
+    font-size: abstract.$font-size-xl !important;
+
+    @include abstract.max-991 {
+      font-size: 1.6rem !important;
+    }
+    @include abstract.max-767 {
+      font-size: 1.6rem !important;
+    }
+
+    @include abstract.max-575 {
+      font-size: 1.2rem !important;
+    }
+  }
+
+  .owl-dots {
+    position: absolute;
+    left: 50%;
+    bottom: 2rem;
+    transform: translateX(-50%);
+
+    .owl-dot {
+      span {
+        background-color: #ccc;
+      }
+
+      &:hover span {
+        background-color: abstract.$red-500;
+      }
+      &.active span {
+        background-color: abstract.$red-500;
+      }
+    }
+  }
+
+  .owl-prev,
+  .owl-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .owl-prev {
+    left: 2%;
+  }
+
+  .owl-next {
+    right: 2%;
+  }
+
+  .owl-nav {
+    height: 0 !important;
+    margin: 0 !important;
+
+    [class*="owl-"] {
+      width: 3.2rem;
+      height: 3.2rem;
+      background-color: abstract.$white !important;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem !important;
+      opacity: 0.5;
+      transition: all 0.2s;
+      &:hover {
+        background-color: darken(abstract.$white, 10%) !important;
+        opacity: 1;
+        color: abstract.$black;
+        text-decoration: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+@use '../abstract';
+
+input:not([type="file"], [type="submit"]),
+textarea {
+    padding: 1.2rem 1.2rem;
+    width: 100%;
+    border: 1px solid #efefef;
+
+    &::placeholder {
+        color: abstract.$black;
+    }
+}
+
+label {
+    color: abstract.$black;
+}
