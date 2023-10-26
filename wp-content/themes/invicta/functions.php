@@ -1,6 +1,6 @@
 <?php
 
-// require get_template_directory() . '/functions/cpts.php';
+require get_template_directory() . '/functions/cpts.php';
 // require get_template_directory() . '/functions/config.php';
 // require get_template_directory() . '/functions/google-tags.php';
 require get_template_directory() . '/functions/load-scripts.php';
