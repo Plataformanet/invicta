@@ -122,7 +122,7 @@
         </div>
     </header>
     <div class="header-placeholder"></div>
-    <a href="https://wa.me/551145912909" class="fixed-whatsapp" target="_blank" rel="noopener" title="WhatsApp">
+    <a href="" class="fixed-whatsapp" target="_blank" rel="noopener" title="WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
     <main>

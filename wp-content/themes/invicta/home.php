@@ -70,11 +70,32 @@ get_header();
     <div class="container">
         <h2>Invicta de acordo com as normas</h2>
      <div class="row">
-        <div class="col-md-3 normas-item">ABNT NBR 13245</div>
-        <div class="col-md-3 normas-item">ABNT NBR 13245</div>
-        <div class="col-md-3 normas-item">ABNT NBR 13245</div>
-        <div class="col-md-3 normas-item">ABNT NBR 13245</div>
-     </div>   
+        <div class="normas-items">
+            <div class="normas-item">ABNT NBR 13245</div>
+            <div class="normas-item">ABNT NBR 13245</div>
+            <div class="normas-item">ABNT NBR 13245</div>
+            <div class="normas-item">ABNT NBR 13245</div>
+        </div>
+     </div>
+     <button>Ver mais</button>   
+    </div>
+</section>
+
+<section class="nossos-projetos">
+    <div class="container">
+        <div class="col-md-12">
+        <div class="nossos-projeto_blocos">
+            <div class="nossos-projeto">
+                 <h2>O que projetamos</h2>
+                 <h3>Nossos projetos</h3>
+                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis doloremque ab, iure, inventore dicta, obcaecati labore explicabo nulla quasi natus dolores. Minus magnam aliquid labore?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis doloremque ab, iure, inventore dicta</p>
+                 <button>Ver mais</button>   
+             </div>
+            <div class="nossos-projeto_img">
+            <img src="<? bloginfo('template_url') ?>/assets/images/imagem-projetos.png" alt="">
+            </div>
+        </div>    
+        </div>
     </div>
 </section>
 

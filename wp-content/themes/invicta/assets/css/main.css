@@ -889,6 +889,12 @@ main>div:first-child {
   font-weight: bold;
 }
 
+.normas-items {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5rem;
+}
+
 .normas-item {
   background-color: #004270;
   padding: 1rem 1rem;
@@ -896,5 +902,64 @@ main>div:first-child {
   margin-left: 1rem;
   text-align: center;
 }
+
+.normas button {
+  background-color: #004270;
+  color: #fff;
+  display: block;
+  margin: auto;
+  border: none;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+}
+
+.nossos-projeto_blocos {
+  display: flex;
+}
+
+.nossos-projetos {
+  margin: 5rem 0 5rem 0;
+}
+
+.nossos-projeto {
+  width: 50%;
+  background-color: #004270;
+  padding: 1.5rem;
+  height: 30rem;
+  position: relative;
+  top: 3rem;
+}
+
+.nossos-projeto h2 {
+  color: #fff;
+  font-size: 2.0rem;
+  font-weight: bold;
+}
+
+.nossos-projeto h3 {
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.nossos-projeto p {
+  color: #fff;
+  padding: 1rem 0 0 0;
+}
+
+.nossos-projeto button {
+  border: none;
+  background-color: #fff;
+  color: #004270;
+  font-weight: bold;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+}
+
+.nossos-projeto_img {
+  background-color: #004270;
+  width: 50%;
+  height: 35rem;
+}
+
+.nossos-projeto_img img {}
 
 /*# sourceMappingURL=main.css.map */
