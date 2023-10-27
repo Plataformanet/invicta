@@ -99,4 +99,21 @@ get_header();
     </div>
 </section>
 
+<section class="clientes">
+<div class="row">
+    <div class="container">
+        <div class="col-md-12">
+            <h2>Nossos clientes</h2>
+            <h3>Clientes</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis doloremque ab, iure, inventore dicta, obcaecati labore explicabo nulla quasi natus dolores. Minus magnam aliquid labore?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis doloremque ab, iure, inventore dicta</p>
+            <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-4"></div>
+                <div class="col-md-4"></div>
+                <div class="col-md-4"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <?php get_footer(); ?>
